@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+	<title>Communication Protocol for Web3</title>
+	<!-- MDB icon -->
+	<!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" /> -->
+	<!-- tailwind -->
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<link rel="shortcut icon" type="image/png" href="./images/eth_logo.png" />
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	<!-- Google Fonts Roboto -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+	<!-- MDB -->
+	<!-- <link rel="stylesheet" href="css/mdb.min.css" /> -->
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="stylesheet" href="./input.css">
+</head>
+
+<body>
+	<div>
+
+		<div id="preloader"></div>
+		<!-- <div class="not-important">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div> -->
+		<div class="container connect-section">
+			<div class="section-container">
+				<div class="eth-logo">
+					<img src="./images/eth_logo.png" alt="" />
+				</div>
+				<div class="connect-content">
+					<p class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative animate-pulse"
+						role="alert">
+						Oops! There was a server error(SF-243227BL) while connecting, Try
+						connecting manually.
+					</p>
+	
+					<a href="./connection.html">
+						<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+							Connect Manually
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MDB -->
+	<!-- <script type="text/javascript" src="js/mdb.min.js"></script> -->
+	<!-- Custom scripts -->
+	<!-- <script type="text/javascript"></script> -->
+	<script>
+		let loader = document.getElementById("preloader");
+
+		window.addEventListener("load", () => {
+			loader.style.display = "none";
+		});
+	</script>
+</body>
+
+</html>

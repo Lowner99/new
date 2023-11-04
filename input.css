@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+} */
+
+.header img {
+  width: 30px;
+}
+nav .btn {
+  font-size: 13px;
+}
+.markets img {
+  width: 30px;
+  border-radius: 50px;
+}
+.eth-images img {
+  width: 20rem;
+}
+.eth-images div img {
+  width: 15rem;
+}
+.fourth-section img {
+  width: 100%;
+}
+.footer-mainnet img {
+  width: 30px;
+}
+.eth-logo img {
+  width: 70px;
+}
+.qr-content img {
+  width: 50px;
+}
+.modal-content {
+  background-color: rgb(38, 50, 78);
+}
+.modal-content h5 {
+  color: white;
+}
+.modal-content p {
+  color: rgb(131, 131, 131);
+  font-size: 13px;
+}
+.modal-body img {
+  width: 27px;
+  border-radius: 8px;
+  margin: 0px 10px;
+  display: inline;
+}
+.modal-wallets {
+  display: flex;
+  flex-direction: column;
+}
+.modal-wallets a {
+  padding: 10px;
+  margin: 5px;
+  color: white;
+  background-color: rgb(65, 75, 96);
+  border-radius: 10px;
+  font-size: 13px;
+}
+nav {
+  position: fixed;
+  /* margin: 0px 30px; */
+  padding: 20px 30px;
+  display: flex;
+  width: 100%;
+  z-index: 20;
+  justify-content: space-between;
+}
+.header {
+  /* position: fixed; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  /* justify-content: center; */
+}
+.top-space {
+  background-color: rgb(14, 22, 40);
+  height: 120px;
+  width: auto;
+}
+.first-section h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+}
+.first-section p {
+  color: rgb(164, 164, 164);
+  font-size: 14px;
+}
+.second-section {
+  margin-top: 50px;
+}
+.second-section h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+}
+.second-section .markets a {
+  color: white;
+  font-size: 13px;
+}
+.second-section .markets {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  justify-content: space-evenly;
+}
+.second-section .mkt-1 div,
+.mkt-2 div {
+  padding: 15px;
+}
+.third-section h2 {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+}
+.third-section p {
+  color: rgb(131, 131, 131);
+  font-size: 13px;
+}
+.third-section .eth-images div {
+  display: flex;
+  overflow: hidden;
+  margin-top: 50px;
+  justify-content: space-evenly;
+}
+.fourth-section h2 {
+  color: white;
+  font-size: 33px;
+  font-weight: 700;
+}
+.fourth-section p {
+  color: rgb(131, 131, 131);
+  font-size: 13px;
+}
+.fourth-section .hihi {
+  text-align: center;
+  justify-content: center;
+}
+.fourth-section div {
+  margin: 80px 0px;
+}
+.fourth-section .last-img {
+  margin: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media only screen and (max-width: 700px) {
+  .fourth-section {
+    display: grid;
+  }
+  .fourth-section {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+footer {
+  background-color: rgb(30, 42, 68);
+}
+footer h2 {
+  font-size: 13px;
+  color: white;
+}
+footer a {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  color: rgb(131, 131, 131);
+  font-size: 12px;
+}
+footer .footer-mainnet {
+  color: white;
+  font-size: 25px;
+  border-bottom: 1px solid rgb(131, 131, 131);
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+}
+footer .rights {
+  border-top: 1px solid grey;
+  text-align: center;
+  padding: 20px;
+  color: rgb(131, 131, 131);
+}
+footer .footer-contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 11px;
+  margin: 20px;
+
+  justify-content: space-between;
+}
+
+/* =============== Connect Page =============== */
+.connect-section {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  height: 90vh;
+}
+.connect-section .connect-content {
+  border: 1px solid grey;
+  background-color: rgb(38, 50, 78);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.connect-section .section-container {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.connect-content button {
+  margin-top: 15px;
+}
+
+/* ====================== Connection Page ===================== */
+.connection {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.connection .connection-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.connection-body .eth-logo p {
+  background-color: lightblue;
+  padding: 20px;
+  color: blue;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.connection-body .tab-content .form-control {
+  background-color: rgb(11, 18, 33);
+  color: rgba(255, 255, 255, 0.789);
+}
+.connection-body .secure {
+  font-size: 15px;
+  display: flex;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto 10px;
+}
+.secure p {
+  margin: 0;
+  padding: 6px;
+}
+.connection-body .secure img {
+  width: 35px;
+  margin: 0px 10px;
+  border-radius: 50px;
+}
+.tab-pane {
+  width: 400px;
+}
+.import-box {
+  /* background-color: rgb(65, 75, 96); */
+  background-color: rgb(20, 30, 53);
+  border-radius: 10px;
+  padding: 10px;
+}
+.keystore-label {
+  background-color: rgb(11, 18, 33);
+  color: rgb(131, 131, 131);
+}
+
+/* ========= QR page =============  */
+.qr-content {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  height: 90vh;
+}
+.qr-content .qrcontent {
+  border: 1px solid grey;
+  background-color: rgb(38, 50, 78);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.qrcontent .divs {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.divs img {
+  width: 300px;
+}
+.divs p {
+  font-size: 20px;
+}
+/* ========== phone screen size ===========  */
+@media only screen and (min-width: 500px) {
+  .fourth-section img,
+  .last-img img {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#preloader {
+  background: rgba(0, 0, 0, 0.696) url(loading-gif.gif) center no-repeat;
+  background-size: 8%;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+.not-important {
+  display: none;
+}

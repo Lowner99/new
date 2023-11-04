@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Communication Protocol for Blockchains</title>
+</head>
+
+<body class="container mx-auto">
+    <nav>
+        <div class="header container">
+            <a href="/index.html">
+                <img src="./images/eth_logo.png" alt="logo" />
+            </a>
+           
+        </div>
+    </nav>
+
+    <!-- ======== modal ========== -->
+    <div
+        class=" h-screen w-full  left-0 top-0 flex justify-center items-center  ">
+        <div class="shadow-lg rounded modal-content">
+            <!-- modal header  -->
+            <div class="border-b py-4 px-2 modal-header">
+                <h5 class="modal-title">Connect Wallet</h5>
+            </div>
+            <!-- modal body  -->
+            <div class="p-3 modal-body">
+                <p>Connect with one of our available wallet providers.</p>
+                <div class="modal-wallets">
+                    <a href="./connect.html">
+                        <img src="./images/metamask.png" alt="" />
+                        Metamask
+                        <span
+                            class="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">Popular</span>
+                    </a>
+                    <a href="./connect.html">
+                        <img src="./images/coinbase.png" alt="" />
+                        Coinbase Wallet
+                    </a>
+                    <a href="./connect.html">
+                        <img src="./images/trust_wallet.png" alt="" />
+                        Trust Wallet
+                    </a>
+                    <a href="./connect.html">
+                        <img src="./images/safepal.jpeg" alt="" />
+                        Safepal Wallet
+                    </a>
+                    <a href="./connect.html">
+                        <img src="./images/walletconnect.jpeg" alt="" />
+                        WalletConnect
+                    </a>
+                    <a href="./connect.html">
+                        <img src="./images/terra.png" alt="" />
+                        Terra Wallet
+                    </a>
+                    <a href="./connect.html">
+                        <img src="./images/ledger.webp" alt="" />
+                        Ledger
+                    </a>
+                    <a href="./connect.html">
+                        <img src="/images/phantom.jpeg" alt="" />
+                        Phantom
+                    </a>
+                    <a href="./connect.html">
+                        <img src="./images/fortmatic.png" alt="" />
+                        Fortmatic
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-end items-center w-100 border-t p-3">
+                <button class="bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-white mr-1 close-modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-space"></div>
+
+    <script>
+        const modal = document.querySelector(".modal");
+
+        const showModal = document.querySelector(".show-modal");
+
+        const closeModal = document.querySelector(".close-modal");
+
+        showModal.addEventListener("click", () => {
+            modal.classList.remove("hidden");
+        });
+        closeModal.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+        
+    </script>
+</body>
+
+</html>
